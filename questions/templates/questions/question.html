@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}How to build a moon park?{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column gap-4">
+    <div class="card">
+        <div class="card-body d-flex gap-4">
+            <div style="width: 120px;">
+                <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail w-100" alt="avatar">
+                <div class="d-flex justify-content-center mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-outline-secondary">▲</a>
+                        <span class="fw-bold fs-5">5</span>
+                        <a href="#" class="btn btn-outline-secondary">▼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-grow-1">
+                <h3 class="card-title">How to build a moon park?</h3>
+                <p class="card-text">Lorem ipsum — dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="card-link">answer(3)</a>
+                    <div class="tags">
+                        <a href="#" class="card-link">space</a>
+                        <a href="#" class="card-link">construction</a>
+                        <a href="#" class="card-link">tourism</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4>Answers</h4>
+        <div class="d-flex flex-column gap-3">
+            <div class="card">
+                <div class="card-body d-flex gap-4">
+                    <div style="width: 100px;">
+                        <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail w-100" alt="avatar">
+                        <div class="d-flex justify-content-center mt-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">▲</a>
+                                <span class="fw-bold">3</span>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">▼</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <p class="card-text">First of all I would like to thank you for the invitation to participate in such a ... Russia is the huge territory which in many respects needs to be render habitable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d-flex gap-4">
+                    <div style="width: 100px;">
+                        <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail w-100" alt="avatar">
+                        <div class="d-flex justify-content-center mt-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-success">▲</a>
+                                <span class="fw-bold text-success">7</span>
+                                <a href="#" class="btn btn-sm btn-outline-danger">▼</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <p class="card-text">First of all I would like to thank you for the invitation to participate in such a ... Russia is the huge territory which in many respects needs to be render habitable.</p>
+                        <div class="mt-2">
+                            <span class="badge bg-success">✔ Correct!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4>Your answer</h4>
+        <form>
+            <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Enter your answer here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Answer</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block account %}
+<div class="d-flex gap-2 align-items-center">
+    <div class="unauth_account">
+        <div class="content__links">
+            <a href="{% url 'core:login' %}">log in</a>
+            <a href="{% url 'core:signup' %}">register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
