@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}List Questions{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column gap-4">
+    <div class="header__main d-flex align-items-center gap-3">
+        <h2>New Questions</h2>
+        <h5><a href="{% url 'questions:hot' %}">Hot Questions</a></h5>
+    </div>
+
+    <div class="card">
+        <div class="card-body d-flex gap-4">
+            <div style="width: 100px;">
+                <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail" alt="photo account">
+                <div class="d-flex justify-content-center mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-secondary">▲</a>
+                        <span class="fw-bold">0</span>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">▼</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5 class="card-title"><a href="{% url 'questions:question' question_id=1 %}">How to build a moon park?</a></h5>
+                <p class="card-text">Guys, I'm looking for advice on constructing a recreational area on the lunar surface. What materials and life support systems would be necessary?</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="card-link">answer(3)</a>
+                    <div class="tags">
+                        <a href="#" class="card-link">space</a>
+                        <a href="#" class="card-link">learning</a>
+                        <a href="#" class="card-link">construction</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body d-flex gap-4">
+            <div style="width: 100px;">
+                <img src="{% static 'img/i (1).jpg' %}" class="img-thumbnail" alt="photo account">
+                <div class="d-flex justify-content-center mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-sm btn-success">▲</a>
+                        <span class="fw-bold text-success">5</span>
+                        <a href="#" class="btn btn-sm btn-outline-danger">▼</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5 class="card-title"><a href="{% url 'questions:question' question_id=2 %}">What's the best way to learn JavaScript in 2026?</a></h5>
+                <p class="card-text">I'm a beginner and overwhelmed by all the frameworks. Should I start with vanilla JS or go straight to React?</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="card-link">answer(3)</a>
+                    <div class="tags">
+                        <a href="#" class="card-link">webdev</a>
+                        <a href="#" class="card-link">learning</a>
+                        <a href="#" class="card-link">javascript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body d-flex gap-4">
+            <div style="width: 100px;">
+                <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail" alt="photo account">
+                <div class="d-flex justify-content-center mt-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-success">▲</a>
+                        <span class="fw-bold text-danger">-2</span>
+                        <a href="#" class="btn btn-sm btn-danger">▼</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5 class="card-title"><a href="{% url 'questions:question' question_id=3 %}">Is the Earth really round?</a></h5>
+                <p class="card-text">Some people claim it's flat. What evidence can I use to convince them otherwise? Please provide simple explanations.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="card-link">answer(0)</a>
+                    <div class="tags">
+                        <a href="#" class="card-link">science</a>
+                        <a href="#" class="card-link">physics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block account %}
+<div class="d-flex gap-2 align-items-center">
+    <div class="auth_account d-flex gap-2 align-items-center">
+        <img src="{% static 'img/man_4179639.png' %}" class="img-thumbnail" alt="avatar" style="width: 40px; height: 40px; object-fit: cover;">
+        <div class="account">
+            <div class="content__name">Dr. Pepper</div>
+            <div class="content__links">
+                <a href="#">settings</a>
+                <a href="#">log out</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
